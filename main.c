@@ -144,7 +144,7 @@ void pwm_update_duty_cycle(uint32_t duty_cycle)
     // Check if value is outside of range. If so, set to 100%
     if(duty_cycle >= 1000)
     {
-        seq_values->channel_0 = 1000;
+        seq_values->channel_0 = 1000 | 0x8000;
     }
     else
     {
